@@ -1,0 +1,52 @@
+<div class="container my-5">
+  <div class="row text-center">
+    <div class="col">
+      <p><span>ROOM {{movie.room}}</span> <span>{{movie.title}}</span></p>
+    </div>
+  </div>
+  <div class="row justify-content-center">
+    <div class="col-6">
+      <div class="row">
+        <div class="col-6">
+          <img [src]="movie.poster" class="movie-img" alt="">
+        </div>
+        <div class="col-6">
+          <div>
+            <div class="inline-block float-left">Genre</div>
+            <div class="inline-block float-left ml-3">
+              <ul>
+                <li *ngFor="let genre of movie.genres">{{genre}}</li>
+              </ul>
+            </div>
+          </div>
+          <div class="clear-fix"></div>
+          <div>
+            <div class="inline-block float-left">Year</div>
+            <div class="inline-block float-left ml-5">{{movie.year}}</div>
+          </div>
+          <div class="clear-fix"></div>
+          <div>
+            <div class="inline-block float-left">Actors</div>
+            <div class="inline-block float-left">
+              <ul>
+                <li *ngFor="let actor of movie.actors">{{actor}}</li>
+              </ul>
+            </div>
+          </div>
+          <div class="clear-fix"></div>
+          <div>
+            <div class="inline-block float-left">Schedule</div>
+            <div class="inline-block float-left">
+              <ul>
+                <li *ngFor="let hour of movie.hours">{{hour}}</li>
+              </ul>
+            </div>
+          </div>
+          <div class="clear-fix"></div>
+          <div>Synopsis</div>
+          <div>{{movie.synopsis}}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

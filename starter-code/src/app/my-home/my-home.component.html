@@ -1,0 +1,13 @@
+<div class="container-fluid main-wrapper">
+  <div class="row">
+    <div class="col text-center my-5">
+      Movie Selector
+    </div>
+  </div>
+  <div class="row d-flex justify-content-around movies-wrapper">
+    <div *ngFor="let movie of movies">
+      <div class="movie-room">ROOM {{movie.room}}</div>
+      <div><a [routerLink]="['/movie', movie.id]"><img [src]="movie.poster" alt="Movie Poster" class="movies-img"></a></div>
+    </div>
+  </div>
+</div>
